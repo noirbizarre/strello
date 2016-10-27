@@ -17,7 +17,7 @@ $ pip install strello
 or from sources:
 
 ```shell
-$ pip install https://https://github.com/noirbizarre/strello/tarball/master
+$ pip install https://github.com/noirbizarre/strello/tarball/master
 ```
 
 ## Usage
