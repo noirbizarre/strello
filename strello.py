@@ -37,8 +37,8 @@ def indent(msg):
 
 
 @click.command()
-@click.argument('dump', required=True, type=click.File('r'))
-@click.option('-o', '--output', required=False, type=click.File('w'))
+@click.argument('dump', required=True, type=click.File('r', encoding='utf8'))
+@click.option('-o', '--output', required=False, type=click.File('w', encoding='utf8'))
 @click.option('-v', '--verbose', is_flag=True)
 def cli(dump, output, verbose):
     '''Extract some statistics from Trello JSON dump'''
