@@ -110,7 +110,7 @@ def get_actions_for_card(card, data):
 
 
 def get_creation_date(card, actions):
-    actions = [a for a in actions if a['type'] == 'createCard']
+    actions = [a for a in actions if a['type'] in ('createCard', 'emailCard')]
     if not actions:
         return
     return actions[0]['date']
@@ -121,6 +121,7 @@ def get_list_date(card, actions, lst):
         a['date'] for a in actions
         if (
             (a['type'] == 'createCard' and a['data']['list']['id'] == lst['id']) or
+            (a['type'] == 'emailCard' and a['data']['list']['id'] == lst['id']) or
             (a['type'] == 'updateCard' and a['data'].get('listAfter', {}).get('id') == lst['id'])
         )
     ]
