@@ -49,7 +49,8 @@ def cli(dump, output, verbose):
     label_arrow('Name', data['name'])
     label_arrow('Extracted on', data['dateLastView'])
     label_arrow('URL', data['url'])
-    label_arrow('Short URL', data['shortLink'])
+    label_arrow('Short link', data['shortLink'])
+    label_arrow('Short URL', data['shortUrl'])
     if output:
         label_arrow('CSV output', output.name)
     arrow('{0} lists'.format(len(data['lists'])))
