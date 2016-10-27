@@ -21,6 +21,7 @@ CSV_FORMAT = {
     'delimiter': ';',
     'quotechar': '"',
     'quoting': csv.QUOTE_NONNUMERIC,
+    'lineterminator': '\n',
 }
 
 
